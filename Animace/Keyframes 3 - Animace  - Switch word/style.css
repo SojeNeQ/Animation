@@ -1,0 +1,48 @@
+body {
+    height: 100vh;
+    background-color: #eb3238;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    font-size: 55px;
+}
+
+.word:before {
+    content: "Draku";
+    text-transform: uppercase;
+    color: #241b86;
+    animation: switch-word 9s 3s infinite;
+
+    /* border: 1px solid blue; */
+}
+
+@keyframes switch-word {
+    0% {
+        content: "Draku";
+    }
+
+    30% {
+        content: "Davide";
+    }
+
+    60% {
+        content: "Daido";
+    }
+
+    90% {
+        content: "Draku";
+    }
+}
+
+
+
+
+/* Pokuď chci dát něco do prostřed třeba nějáký text tak stačí napsat toto do CSS :
+
+display: flex;
+justify-content: center;
+align-items: center; */

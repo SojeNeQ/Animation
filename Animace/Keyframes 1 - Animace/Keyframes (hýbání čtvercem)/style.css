@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+
+    animation-name: moving;
+    animation-duration: 3s;
+    /* animation-delay: 4s; */
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+
+    /* animation: moving 3s 4s both infinite ease-in-out alternate; 
+
+    Lze to zapsat takto zkráceně 
+    */
+}
+
+/* 
+
+** animation-duration: 3s; **
+Znamená, že to bude jezdit po dobu 3 vteřin
+
+** animation-fill-mode: forwards; **
+znamená, že to zůstane na konečném místě.
+
+** animation-delay: **
+znamená že se na začátku při startu stránky zůstane na místě, neboli zpoždění je dobré za to dát
+** animation-fill-mode: backwards; **
+
+** animation-fill-mode: both; **
+znamená to, že aplikují ty forwards a backwars zároveň
+
+** animation-iteration-count: infinite; **
+Znamená, že je to stále dokola a nepřestane to
+
+** animation-direction: reverse; **
+Znamená, že to jede ze zdola nahoru neboli opačně a normal je normální
+
+** animation-direction: alternate; **
+Znamená, že to jezdí stále dokola doprava dolu hned nahoru a doleva
+
+
+*/
+
+@keyframes moving {
+    0% {transform: translateX(200px);}
+
+    50% {transform: translateX(1000px);}
+
+    100% {transform: translate(1000px, 500px)}
+}
+
+/* lze zapsat 
+
+@keyframes moving {
+    from {transform: translateX(0);}
+    to {transform: translateX(1000px)}
+}
+
+Když je translateX tak doprava
+Když je translate tak to jede dolu
+
+TranslateX znamená že se pohybuje jen po ose X 
+
+Translate znamená že se musí pohybovat po ose X a Y takže doprava dolu
+
+*/
+
